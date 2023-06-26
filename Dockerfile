@@ -83,7 +83,7 @@ RUN cp /biaflows-utilities/bin/* /usr/bin/
 RUN rm -r /biaflows-utilities
 
 ADD wrapper.py /app/wrapper.py
-ADD CP_detect_nuclei.cppipe /app/CP_detect_nuclei.cppipe
+ADD PLA-dot-counting-with-speckle-enhancement.cpproj /app/PLA-dot-counting-with-speckle-enhancement.cpproj
 ADD descriptor.json /app/descriptor.json
 
 ENTRYPOINT ["python3.7","/app/wrapper.py"]

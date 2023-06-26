@@ -35,7 +35,7 @@ def main(argv):
         in_imgs, gt_imgs, in_path, gt_path, out_path, tmp_path = prepare_data(problem_cls, bj, is_2d=True, **bj.flags)
 
         plugindir = "/app/plugins"
-        pipeline = "/app/CP_detect_nuclei.cppipe"
+        pipeline = "/app/PLA-dot-counting-with-speckle-enhancement.cpproj"
         file_list = os.path.join(tmp_path,"file_list.txt")
         fh = open(file_list,"w")
         for image in in_imgs:

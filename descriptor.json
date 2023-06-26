@@ -1,11 +1,11 @@
 {
-  "name": "NucleiSegmentation-CellProfiler",
-  "description": "Workflow for nuclei segmentation in CellProfiler",
+  "name": "SpotCounting-CellProfiler",
+  "description": "Workflow for spot counting in CellProfiler",
   "container-image": {
-    "image": "neubiaswg5/w_nucleisegmentation-cellprofiler",
+    "image": "torecluik/w_spotcounting-cellprofiler",
     "type": "singularity"
   },
-  "command-line": "python wrapper.py CYTOMINE_HOST CYTOMINE_PUBLIC_KEY CYTOMINE_PRIVATE_KEY CYTOMINE_ID_PROJECT CYTOMINE_ID_SOFTWARE NUCLEI_DIAMETER_RANGE SIZE_SMOOTHING_FILTER",
+  "command-line": "python wrapper.py CYTOMINE_HOST CYTOMINE_PUBLIC_KEY CYTOMINE_PRIVATE_KEY CYTOMINE_ID_PROJECT CYTOMINE_ID_SOFTWARE",
   "inputs": [
     {
       "id": "cytomine_host",
@@ -50,28 +50,6 @@
       "name": "BIAFLOWS software ID",
       "set-by-server": true,
       "optional": false,
-      "type": "Number"
-    },
-    {
-      "id": "nuclei_diameter_range",
-      "value-key": "@ID",
-      "command-line-flag": "--@id",
-      "name": "Typical diameter of objects, in pixel units (Min,Max)",
-      "description": "Typical diameter of objects, in pixel units (Min,Max)",
-      "default-value": "15,4000",
-      "set-by-server": false,
-      "optional": true,
-      "type": "String"
-    },
-    {
-      "id": "size_smoothing_filter",
-      "value-key": "@ID",
-      "command-line-flag": "--@id",
-      "name": "Size of smoothing filter",
-      "description": "Size of smoothing filter",
-      "default-value": 5,
-      "set-by-server": false,
-      "optional": true,
       "type": "Number"
     }
   ],
