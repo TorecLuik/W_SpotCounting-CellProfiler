@@ -1,30 +1,8 @@
-# FROM ubuntu:16.04
 FROM cellprofiler/cellprofiler
 
 # Install Python3.7
 RUN apt-get update && apt-get install -y python3.7 python3.7-dev python3.7-venv
 RUN python3.7 -m pip install --upgrade pip && python3.7 -m pip install Cython
-
-# # Install CellProfiler
-# RUN apt-get update -y   && \
-#     apt-get upgrade -y  && \
-#     apt-get install -y     \
-#         build-essential    \
-#         cython             
-    #     git                \
-    #     libmysqlclient-dev \
-    #     libhdf5-dev        \
-    #     libxml2-dev        \
-    #     libxslt1-dev       \
-    #     openjdk-8-jdk      \
-	# libssl-dev	   \
-    #     python-dev         \
-    #     python-pip         \
-    #     python-scipy       \
-    #     python-vigra       \
-    #     python-wxgtk3.0    \
-    #     python-zmq         \
-	# python-pytest
 
 # ------------------------------------------------------------------------------
 # Install Cytomine python client
