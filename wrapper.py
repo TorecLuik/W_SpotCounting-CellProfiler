@@ -75,7 +75,7 @@ def main(argv):
             "cellprofiler", "-c", "-r", "-p", mod_pipeline,
             "-i", in_path, "-o", out_path, "-t", tmp_path,
         ]
-        status = run(" ".join(shArgs), shell=True, cwd="/app/")
+        status = run(" ".join(shArgs), shell=True)
 
         if status.returncode != 0:
             err_desc = "Failed to execute the CellProfiler pipeline: {} (return code: {})".format(
